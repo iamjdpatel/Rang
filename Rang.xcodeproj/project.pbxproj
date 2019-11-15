@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		F14E63BC237DBD960059BA60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63BB237DBD960059BA60 /* AppDelegate.swift */; };
 		F14E63BE237DBD960059BA60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63BD237DBD960059BA60 /* SceneDelegate.swift */; };
-		F14E63C0237DBD960059BA60 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63BF237DBD960059BA60 /* ContentView.swift */; };
 		F14E63C2237DBD960059BA60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14E63C1237DBD960059BA60 /* Assets.xcassets */; };
 		F14E63C5237DBD960059BA60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14E63C4237DBD960059BA60 /* Preview Assets.xcassets */; };
 		F14E63C8237DBD960059BA60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14E63C6237DBD960059BA60 /* LaunchScreen.storyboard */; };
+		F14E63D0237DBDA10059BA60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63CF237DBDA10059BA60 /* HomeView.swift */; };
+		F14E63D2237DBDAB0059BA60 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63D1237DBDAB0059BA60 /* HistoryView.swift */; };
+		F14E63D5237DC1580059BA60 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63D4237DC1580059BA60 /* ColorSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F14E63B8237DBD960059BA60 /* Rang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F14E63BB237DBD960059BA60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F14E63BD237DBD960059BA60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F14E63BF237DBD960059BA60 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F14E63C1237DBD960059BA60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F14E63C4237DBD960059BA60 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F14E63C7237DBD960059BA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F14E63C9237DBD960059BA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F14E63CF237DBDA10059BA60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		F14E63D1237DBDAB0059BA60 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		F14E63D3237DC0620059BA60 /* Rang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rang.entitlements; sourceTree = "<group>"; };
+		F14E63D4237DC1580059BA60 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +61,16 @@
 		F14E63BA237DBD960059BA60 /* Rang */ = {
 			isa = PBXGroup;
 			children = (
+				F14E63C3237DBD960059BA60 /* Preview Content */,
+				F14E63C1237DBD960059BA60 /* Assets.xcassets */,
+				F14E63D3237DC0620059BA60 /* Rang.entitlements */,
+				F14E63C9237DBD960059BA60 /* Info.plist */,
+				F14E63C6237DBD960059BA60 /* LaunchScreen.storyboard */,
 				F14E63BB237DBD960059BA60 /* AppDelegate.swift */,
 				F14E63BD237DBD960059BA60 /* SceneDelegate.swift */,
-				F14E63BF237DBD960059BA60 /* ContentView.swift */,
-				F14E63C1237DBD960059BA60 /* Assets.xcassets */,
-				F14E63C6237DBD960059BA60 /* LaunchScreen.storyboard */,
-				F14E63C9237DBD960059BA60 /* Info.plist */,
-				F14E63C3237DBD960059BA60 /* Preview Content */,
+				F14E63D4237DC1580059BA60 /* ColorSlider.swift */,
+				F14E63CF237DBDA10059BA60 /* HomeView.swift */,
+				F14E63D1237DBDAB0059BA60 /* HistoryView.swift */,
 			);
 			path = Rang;
 			sourceTree = "<group>";
@@ -147,8 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F14E63BC237DBD960059BA60 /* AppDelegate.swift in Sources */,
+				F14E63D0237DBDA10059BA60 /* HomeView.swift in Sources */,
+				F14E63D2237DBDAB0059BA60 /* HistoryView.swift in Sources */,
 				F14E63BE237DBD960059BA60 /* SceneDelegate.swift in Sources */,
-				F14E63C0237DBD960059BA60 /* ContentView.swift in Sources */,
+				F14E63D5237DC1580059BA60 /* ColorSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +294,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rang/Rang.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Rang/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Y7F7UCN4K;
 				ENABLE_PREVIEWS = YES;
@@ -295,6 +308,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iamjdpatel.Rang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +318,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rang/Rang.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Rang/Preview Content\"";
 				DEVELOPMENT_TEAM = 8Y7F7UCN4K;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = iamjdpatel.Rang;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

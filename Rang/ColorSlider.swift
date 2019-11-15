@@ -6,4 +6,21 @@
 //  Copyright © 2019 JD. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+struct ColorSlider: View {
+    
+    @Binding var value: Double
+    var textColor: Color
+    
+    var body: some View {
+        HStack {
+            Text("0")
+              .foregroundColor(textColor)
+            Slider(value: $value)
+            Text("255")
+              .foregroundColor(textColor)
+        }
+        .padding()
+    }
+}
