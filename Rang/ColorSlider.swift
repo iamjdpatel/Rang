@@ -14,13 +14,15 @@ struct ColorSlider: View {
     var textColor: Color
     
     var body: some View {
+        
         HStack {
             Text("0")
               .foregroundColor(textColor)
-            Slider(value: $value)
+            Slider(value: $value).accentColor(textColor)
             Text("255")
               .foregroundColor(textColor)
         }
-        .padding()
+//        .padding(8)
+        
     }
 }

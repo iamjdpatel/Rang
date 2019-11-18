@@ -10,13 +10,13 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let rTarget = Double.random(in: 0..<1)
-    let gTarget = Double.random(in: 0..<1)
-    let bTarget = Double.random(in: 0..<1)
+    @State var rTarget = Double.random(in: 0..<1)
+    @State var gTarget = Double.random(in: 0..<1)
+    @State var bTarget = Double.random(in: 0..<1)
     
-    @State var rGuess: Double
-    @State var gGuess: Double
-    @State var bGuess: Double
+    @State var rGuess: Double = 0.5
+    @State var gGuess: Double = 0.5
+    @State var bGuess: Double = 0.5
     
     @State var showAlert = false
     
@@ -28,54 +28,59 @@ struct HomeView: View {
                 
                 VStack {
                     
-                    Rectangle()
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
-                        .foregroundColor(Color(red: rTarget, green: gTarget, blue: bTarget, opacity: 1.0))
-                    Text("Match this Rang")
-                    
-                    Spacer(minLength: 20)
-                    
-                    Rectangle()
-                        .cornerRadius(10)
-                        .shadow(radius: 5)
-                        .foregroundColor(Color(red: rGuess, green: gGuess, blue: bGuess, opacity: 1.0))
-                    HStack {
-                        Text("R: \(Int(rGuess * 255.0))")
-                        Text("G: \(Int(gGuess * 255.0))")
-                        Text("B: \(Int(bGuess * 255.0))")
+                    VStack {
+                        
+                        Rectangle()
+                            .cornerRadius(10)
+                            .foregroundColor(Color(red: rTarget, green: gTarget, blue: bTarget, opacity: 1.0))
+                            .onTapGesture {
+                                self.resetRangs()
+                        }
+                        
+                        Text("Match this Rang")
+                        
+                        Divider()
+                        
+                        Spacer(minLength: 20)
+                        
+                        Rectangle()
+                            .cornerRadius(10)
+                            .foregroundColor(Color(red: rGuess, green: gGuess, blue: bGuess, opacity: 1.0))
+                        HStack {
+                            Text("R: \(Int(rGuess * 255.0))").foregroundColor(.red)
+                            Text("G: \(Int(gGuess * 255.0))").foregroundColor(.green)
+                            Text("B: \(Int(bGuess * 255.0))").foregroundColor(.blue)
+                        }
+                        
                     }
                     
-                }.padding()
-                            
-                Divider()
-                
-                VStack {
-                    ColorSlider(value: $rGuess, textColor: .red)
-                    ColorSlider(value: $gGuess, textColor: .green)
-                    ColorSlider(value: $bGuess, textColor: .blue)
+                    Group {
+                        ColorSlider(value: $rGuess, textColor: .red)
+                        ColorSlider(value: $gGuess, textColor: .green)
+                        ColorSlider(value: $bGuess, textColor: .blue)
+                    }
+                    .background(Color(.quaternarySystemFill).cornerRadius(10))
                 }
-                .cornerRadius(5)
-                .background(Color.white)
-                .padding(16)
+                .padding()
                 
                 Button(action: {
                     self.showAlert = true
+                    self.resetRangs()
                 }) {
                     Text("Calculate")
+                        .fontWeight(.regular)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 45)
+                        .foregroundColor(.white)
+                        .background(Color.green)
+                        .cornerRadius(5)
                         .font(.headline)
-                        .bold()
                 }.alert(isPresented: $showAlert) {
                     Alert(title: Text("Your Score"), message: Text("\(computeScore())"))
                 }
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 45)
-                .cornerRadius(10)
-                .foregroundColor(.white)
-                .background(Color.green)
-                .padding([.leading, .bottom, .trailing], 16)
+                .padding()
                 
             }
-            .background(Color(.systemBackground))
+            .background(Color(.secondarySystemBackground))
             .navigationBarTitle(Text("Rang"), displayMode: .large)
             
         }
@@ -90,12 +95,24 @@ struct HomeView: View {
         return Int((1.0 - diff) * 100.0 + 0.5)
     }
     
+    private func resetRangs() {
+        
+        self.rGuess = 0.5
+        self.gGuess = 0.5
+        self.bGuess = 0.5
+        
+        rTarget = Double.random(in: 0..<1)
+        gTarget = Double.random(in: 0..<1)
+        bTarget = Double.random(in: 0..<1)
+        
+    }
+    
 }
 
 
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(rGuess: 0.5, gGuess: 0.5, bGuess: 0.5)
+        HomeView()
     }
 }
