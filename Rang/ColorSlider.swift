@@ -22,7 +22,7 @@ struct ColorSlider: View {
             Text("255")
               .foregroundColor(textColor)
         }
-//        .padding(8)
+        .padding(.horizontal, 16)
         
     }
 }

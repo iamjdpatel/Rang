@@ -54,18 +54,26 @@ struct HomeView: View {
                         
                     }
                     
-                    Group {
+                    Spacer()
+                    
+                    VStack {
+                        Spacer()
                         ColorSlider(value: $rGuess, textColor: .red)
+                        Spacer()
                         ColorSlider(value: $gGuess, textColor: .green)
+                        Spacer()
                         ColorSlider(value: $bGuess, textColor: .blue)
+                        Spacer()
                     }
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150)
                     .background(Color(.quaternarySystemFill).cornerRadius(10))
+//                    .padding()
+                
                 }
                 .padding()
                 
                 Button(action: {
                     self.showAlert = true
-                    self.resetRangs()
                 }) {
                     Text("Calculate")
                         .fontWeight(.regular)
@@ -75,7 +83,9 @@ struct HomeView: View {
                         .cornerRadius(5)
                         .font(.headline)
                 }.alert(isPresented: $showAlert) {
-                    Alert(title: Text("Your Score"), message: Text("\(computeScore())"))
+                    Alert(title: Text("Your Score"), message: Text("\(computeScore())"), dismissButton: .default(Text("OK"), action: {
+                        self.resetRangs()
+                    }))
                 }
                 .padding()
                 
@@ -97,13 +107,17 @@ struct HomeView: View {
     
     private func resetRangs() {
         
-        self.rGuess = 0.5
-        self.gGuess = 0.5
-        self.bGuess = 0.5
-        
-        rTarget = Double.random(in: 0..<1)
-        gTarget = Double.random(in: 0..<1)
-        bTarget = Double.random(in: 0..<1)
+        withAnimation {
+            
+            self.rGuess = 0.5
+            self.gGuess = 0.5
+            self.bGuess = 0.5
+            
+            rTarget = Double.random(in: 0..<1)
+            gTarget = Double.random(in: 0..<1)
+            bTarget = Double.random(in: 0..<1)
+            
+        }
         
     }
     
