@@ -67,7 +67,6 @@ struct HomeView: View {
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150)
                     .background(Color(.quaternarySystemFill).cornerRadius(10))
-//                    .padding()
                 
                 }
                 .padding()
@@ -87,7 +86,7 @@ struct HomeView: View {
                         self.resetRangs()
                     }))
                 }
-                .padding()
+                .padding([.leading, .trailing, .bottom], 16)
                 
             }
             .background(Color(.secondarySystemBackground))
