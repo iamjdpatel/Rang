@@ -6,4 +6,15 @@
 //  Copyright © 2019 JD. All rights reserved.
 //
 
-import Foundation
+import SwiftUI
+
+struct HistoryView: View {
+
+    var body: some View {
+        
+        Text("WIP")
+        
+    }
+
+}
+

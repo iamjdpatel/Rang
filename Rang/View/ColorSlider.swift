@@ -16,11 +16,11 @@ struct ColorSlider: View {
     var body: some View {
         
         HStack {
-            Text("0")
-              .foregroundColor(textColor)
+//            Text("0")
+//              .foregroundColor(textColor)
             Slider(value: $value).accentColor(textColor)
-            Text("255")
-              .foregroundColor(textColor)
+//            Text("255")
+//              .foregroundColor(textColor)
         }
         .padding(.horizontal, 16)
         

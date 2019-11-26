@@ -50,7 +50,9 @@ struct HomeView: View {
                             Text("R: \(Int(rGuess * 255.0))").foregroundColor(.red)
                             Text("G: \(Int(gGuess * 255.0))").foregroundColor(.green)
                             Text("B: \(Int(bGuess * 255.0))").foregroundColor(.blue)
-                        }
+                        }.padding(5)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
+                         
                         
                     }
                     
@@ -74,7 +76,7 @@ struct HomeView: View {
                 Button(action: {
                     self.showAlert = true
                 }) {
-                    Text("Calculate")
+                    Text("Calculate Rang")
                         .fontWeight(.regular)
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 45)
                         .foregroundColor(.white)
@@ -82,7 +84,7 @@ struct HomeView: View {
                         .cornerRadius(5)
                         .font(.headline)
                 }.alert(isPresented: $showAlert) {
-                    Alert(title: Text("Your Score"), message: Text("\(computeScore())"), dismissButton: .default(Text("OK"), action: {
+                    Alert(title: Text("Your Rang Score"), message: Text("\(computeScore())"), dismissButton: .default(Text("OK"), action: {
                         self.resetRangs()
                     }))
                 }
