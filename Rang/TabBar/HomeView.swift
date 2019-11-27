@@ -46,12 +46,12 @@ struct HomeView: View {
                         Rectangle()
                             .cornerRadius(10)
                             .foregroundColor(Color(red: rGuess, green: gGuess, blue: bGuess, opacity: 1.0))
-                        HStack {
-                            Text("R: \(Int(rGuess * 255.0))").foregroundColor(.red)
-                            Text("G: \(Int(gGuess * 255.0))").foregroundColor(.green)
-                            Text("B: \(Int(bGuess * 255.0))").foregroundColor(.blue)
-                        }.padding(5)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
+//                        HStack {
+//                            Text("R: \(Int(rGuess * 255.0))").foregroundColor(.red)
+//                            Text("G: \(Int(gGuess * 255.0))").foregroundColor(.green)
+//                            Text("B: \(Int(bGuess * 255.0))").foregroundColor(.blue)
+//                        }.padding(5)
+//                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
                          
                         
                     }
