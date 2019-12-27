@@ -64,19 +64,21 @@ struct GradientView: View {
                             .background(LinearGradient(gradient:  Gradient(colors: [Color(red: lrGuess, green: lgGuess, blue: lbGuess, opacity: 1.0), Color(red: rrGuess, green: rgGuess, blue: rbGuess, opacity: 1.0)]), startPoint: .leading, endPoint: .trailing)).cornerRadius(10)
                         
 //                        HStack {
-//                            
+//
 //                            Text("R: \(Int(lrGuess * 255.0))").foregroundColor(.red)
 //                            Text("G: \(Int(lgGuess * 255.0))").foregroundColor(.green)
 //                            Text("B: \(Int(lbGuess * 255.0))").foregroundColor(.blue)
-//                            
+//
 //                            Spacer()
-//                            
+//
 //                            Text("R: \(Int(rrGuess * 255.0))").foregroundColor(.red)
 //                            Text("G: \(Int(rgGuess * 255.0))").foregroundColor(.green)
 //                            Text("B: \(Int(rbGuess * 255.0))").foregroundColor(.blue)
-//                            
+//
 //                        }.padding(5)
 //                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
+                        
+                        Spacer(minLength: 16)
                         
                     }
                     

@@ -26,11 +26,11 @@ struct TabBar: View {
                     Text("Gradients")
                 }.tag(1)
             
-            HistoryView()
-                .tabItem {
-                    Image(systemName: "clock")
-                    Text("History")
-                }.tag(2)
+//            HistoryView()
+//                .tabItem {
+//                    Image(systemName: "clock")
+//                    Text("History")
+//                }.tag(2)
             
         }
         

@@ -52,7 +52,7 @@ struct HomeView: View {
 //                            Text("B: \(Int(bGuess * 255.0))").foregroundColor(.blue)
 //                        }.padding(5)
 //                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
-                         
+                        Spacer(minLength: 16)
                         
                     }
                     
