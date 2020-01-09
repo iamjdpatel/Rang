@@ -109,17 +109,13 @@ struct HomeView: View {
     
     private func resetRangs() {
         
-//        withAnimation {
-            
-            self.rGuess = 0.5
-            self.gGuess = 0.5
-            self.bGuess = 0.5
-            
-            rTarget = Double.random(in: 0..<1)
-            gTarget = Double.random(in: 0..<1)
-            bTarget = Double.random(in: 0..<1)
-            
-//        }
+        self.rGuess = 0.5
+        self.gGuess = 0.5
+        self.bGuess = 0.5
+        
+        rTarget = Double.random(in: 0..<1)
+        gTarget = Double.random(in: 0..<1)
+        bTarget = Double.random(in: 0..<1)
         
     }
     

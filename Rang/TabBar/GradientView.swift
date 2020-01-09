@@ -156,25 +156,21 @@ struct GradientView: View {
     
     private func resetRangs() {
         
-//        withAnimation {
-            
-            self.lrGuess = 0.2
-            self.lgGuess = 0.2
-            self.lbGuess = 0.2
-            
-            self.rrGuess = 0.6
-            self.rgGuess = 0.6
-            self.rbGuess = 0.6
-            
-            lrTarget = Double.random(in: 0..<1)
-            lgTarget = Double.random(in: 0..<1)
-            lbTarget = Double.random(in: 0..<1)
-            
-            rrTarget = Double.random(in: 0..<1)
-            rgTarget = Double.random(in: 0..<1)
-            rbTarget = Double.random(in: 0..<1)
-            
-//        }
+        self.lrGuess = 0.2
+        self.lgGuess = 0.2
+        self.lbGuess = 0.2
+        
+        self.rrGuess = 0.6
+        self.rgGuess = 0.6
+        self.rbGuess = 0.6
+        
+        lrTarget = Double.random(in: 0..<1)
+        lgTarget = Double.random(in: 0..<1)
+        lbTarget = Double.random(in: 0..<1)
+        
+        rrTarget = Double.random(in: 0..<1)
+        rgTarget = Double.random(in: 0..<1)
+        rbTarget = Double.random(in: 0..<1)
         
     }
     
