@@ -103,12 +103,13 @@ struct HomeView: View {
         let gDiff = gGuess - gTarget
         let bDiff = bGuess - bTarget
         let diff = sqrt(rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)
-        return Int((1.0 - diff) * 100.0 + 0.5)
+        let score = Int((1.0 - diff) * 100.0 + 0.5)
+        return score > 0 ? score : 0
     }
     
     private func resetRangs() {
         
-        withAnimation {
+//        withAnimation {
             
             self.rGuess = 0.5
             self.gGuess = 0.5
@@ -118,7 +119,7 @@ struct HomeView: View {
             gTarget = Double.random(in: 0..<1)
             bTarget = Double.random(in: 0..<1)
             
-        }
+//        }
         
     }
     

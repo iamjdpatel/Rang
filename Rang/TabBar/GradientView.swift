@@ -149,13 +149,14 @@ struct GradientView: View {
         let rbDiff = rbGuess - rbTarget
         
         let diff = sqrt(lrDiff * lrDiff + lgDiff * lgDiff + lbDiff * lbDiff + rrDiff * rrDiff + rgDiff * rgDiff + rbDiff * rbDiff)
-        return Int((1.0 - diff) * 100.0 + 0.5)
+        let score = Int((1.0 - diff) * 100.0 + 0.5)
+        return score > 0 ? score : 0
         
     }
     
     private func resetRangs() {
         
-        withAnimation {
+//        withAnimation {
             
             self.lrGuess = 0.2
             self.lgGuess = 0.2
@@ -173,7 +174,7 @@ struct GradientView: View {
             rgTarget = Double.random(in: 0..<1)
             rbTarget = Double.random(in: 0..<1)
             
-        }
+//        }
         
     }
     
