@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    
     @State var rTarget = Double.random(in: 0..<1)
     @State var gTarget = Double.random(in: 0..<1)
     @State var bTarget = Double.random(in: 0..<1)
@@ -21,28 +20,21 @@ struct HomeView: View {
     @State var showAlert = false
     
     var body: some View {
-        
         NavigationView {
-            
             VStack {
-                
                 VStack {
-                    
                     VStack {
-                        
                         Rectangle()
                             .cornerRadius(10)
                             .foregroundColor(Color(red: rTarget, green: gTarget, blue: bTarget, opacity: 1.0))
                             .onTapGesture {
-                                self.resetRangs()
-                        }
-                        
+                                withAnimation {
+                                    self.resetRangs()
+                                }
+                            }
                         Text("Match this Rang")
-                        
                         Divider()
-                        
                         Spacer(minLength: 20)
-                        
                         Rectangle()
                             .cornerRadius(10)
                             .foregroundColor(Color(red: rGuess, green: gGuess, blue: bGuess, opacity: 1.0))
@@ -53,11 +45,8 @@ struct HomeView: View {
 //                        }.padding(5)
 //                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 30)
                         Spacer(minLength: 16)
-                        
                     }
-                    
                     Spacer()
-                    
                     VStack {
                         Spacer()
                         ColorSlider(value: $rGuess, textColor: .red)
@@ -69,7 +58,6 @@ struct HomeView: View {
                     }
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 150)
                     .background(Color(.quaternarySystemFill).cornerRadius(10))
-                
                 }
                 .padding()
                 
@@ -89,13 +77,10 @@ struct HomeView: View {
                     }))
                 }
                 .padding([.leading, .trailing, .bottom], 16)
-                
             }
             .background(Color(.secondarySystemBackground))
             .navigationBarTitle(Text("Rang"), displayMode: .large)
-            
         }
-        
     }
     
     private func computeScore() -> Int {
@@ -108,7 +93,6 @@ struct HomeView: View {
     }
     
     private func resetRangs() {
-        
         self.rGuess = 0.5
         self.gGuess = 0.5
         self.bGuess = 0.5
@@ -116,12 +100,8 @@ struct HomeView: View {
         rTarget = Double.random(in: 0..<1)
         gTarget = Double.random(in: 0..<1)
         bTarget = Double.random(in: 0..<1)
-        
     }
-    
 }
-
-
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

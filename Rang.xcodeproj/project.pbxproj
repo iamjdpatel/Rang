@@ -13,9 +13,7 @@
 		F14E63C5237DBD960059BA60 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F14E63C4237DBD960059BA60 /* Preview Assets.xcassets */; };
 		F14E63C8237DBD960059BA60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F14E63C6237DBD960059BA60 /* LaunchScreen.storyboard */; };
 		F14E63D0237DBDA10059BA60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63CF237DBDA10059BA60 /* HomeView.swift */; };
-		F14E63D2237DBDAB0059BA60 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63D1237DBDAB0059BA60 /* HistoryView.swift */; };
 		F14E63D5237DC1580059BA60 /* ColorSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F14E63D4237DC1580059BA60 /* ColorSlider.swift */; };
-		F1576CA9238D7E1E00720F60 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1576CA8238D7E1E00720F60 /* Color.swift */; };
 		F182F2CE238D78A70075D283 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F2CD238D78A70075D283 /* TabBar.swift */; };
 		F182F2D0238D78CA0075D283 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F182F2CF238D78CA0075D283 /* GradientView.swift */; };
 /* End PBXBuildFile section */
@@ -29,10 +27,8 @@
 		F14E63C7237DBD960059BA60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F14E63C9237DBD960059BA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F14E63CF237DBDA10059BA60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		F14E63D1237DBDAB0059BA60 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		F14E63D3237DC0620059BA60 /* Rang.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rang.entitlements; sourceTree = "<group>"; };
 		F14E63D4237DC1580059BA60 /* ColorSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSlider.swift; sourceTree = "<group>"; };
-		F1576CA8238D7E1E00720F60 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F182F2CD238D78A70075D283 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		F182F2CF238D78CA0075D283 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +70,6 @@
 				F14E63C6237DBD960059BA60 /* LaunchScreen.storyboard */,
 				F14E63BB237DBD960059BA60 /* AppDelegate.swift */,
 				F14E63BD237DBD960059BA60 /* SceneDelegate.swift */,
-				F182F2D5238D790E0075D283 /* Extensions */,
 				F182F2D4238D79050075D283 /* View */,
 				F182F2D3238D78DB0075D283 /* TabBar */,
 			);
@@ -95,7 +90,6 @@
 				F182F2CD238D78A70075D283 /* TabBar.swift */,
 				F14E63CF237DBDA10059BA60 /* HomeView.swift */,
 				F182F2CF238D78CA0075D283 /* GradientView.swift */,
-				F14E63D1237DBDAB0059BA60 /* HistoryView.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -106,14 +100,6 @@
 				F14E63D4237DC1580059BA60 /* ColorSlider.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		F182F2D5238D790E0075D283 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F1576CA8238D7E1E00720F60 /* Color.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,7 +129,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = JD;
 				TargetAttributes = {
 					F14E63B7237DBD960059BA60 = {
@@ -189,10 +175,8 @@
 			files = (
 				F14E63BC237DBD960059BA60 /* AppDelegate.swift in Sources */,
 				F14E63D0237DBDA10059BA60 /* HomeView.swift in Sources */,
-				F14E63D2237DBDAB0059BA60 /* HistoryView.swift in Sources */,
 				F182F2CE238D78A70075D283 /* TabBar.swift in Sources */,
 				F182F2D0238D78CA0075D283 /* GradientView.swift in Sources */,
-				F1576CA9238D7E1E00720F60 /* Color.swift in Sources */,
 				F14E63BE237DBD960059BA60 /* SceneDelegate.swift in Sources */,
 				F14E63D5237DC1580059BA60 /* ColorSlider.swift in Sources */,
 			);
@@ -238,6 +222,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -298,6 +283,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
